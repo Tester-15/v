@@ -1,0 +1,10 @@
+egrep -c '(vmx|svm)' /proc/cpuinfo .check comapatibility
+sudo apt update
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager .install
+ lsmod | grep kvm .verify
+ sudo usermod -aG libvirt <username> .configure Permissions
+ echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf .nestedvirtualization
+ sudo modprobe -r kvm_intel 
+sudo modprobe kvm_intel
+ sudo apt install virt-manager .for gui
+   
